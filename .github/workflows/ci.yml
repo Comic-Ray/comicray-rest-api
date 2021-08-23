@@ -1,0 +1,30 @@
+name: build
+on:
+  push:
+    paths-ignore:
+      - "README.md"
+      - "LICENSE"
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core SDK 5.0.x
+        uses: actions/setup-dotnet@v1.7.2
+        with:
+          dotnet-version: 5.0.x
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore ComicRay.sln
+
+      # Publish to Heroku
+
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: "${{ secrets.HEROKU_APP_NAME }}"
+          heroku_email: "${{ secrets.HEROKU_EMAIL }}"
+          usedocker: true

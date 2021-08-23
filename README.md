@@ -1,5 +1,7 @@
 # ComicRay's Rest API
 
+![CI](https://github.com/Comic-Ray/comicray-rest-api/workflows/ci/badge.svg)
+
 Rest API endpoints for all the offical ComicRay applications backed by ASP.Net Core technology using .Net5.
 
 ## License
