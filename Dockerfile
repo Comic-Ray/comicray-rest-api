@@ -3,11 +3,11 @@ WORKDIR /source
 
 COPY *.sln .
 COPY *.csproj .
-RUN dotnet restore
+RUN dotnet restore ComicRay.sln
 
 COPY . .
 WORKDIR /source
-RUN dotnet publish -c release -o /app --no-restore
+RUN dotnet publish -c release -o /app --no-restore ComicRay.sln
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
