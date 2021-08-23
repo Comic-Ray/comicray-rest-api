@@ -1,6 +1,6 @@
 # ComicRay's Rest API
 
-![CI](https://github.com/Comic-Ray/comicray-rest-api/workflows/ci/badge.svg)
+[![CI](https://github.com/Comic-Ray/comicray-rest-api/actions/workflows/ci.yml/badge.svg)](https://github.com/Comic-Ray/comicray-rest-api/actions/workflows/ci.yml)
 
 Rest API endpoints for all the offical ComicRay applications backed by ASP.Net Core technology using .Net5.
 
@@ -9,7 +9,7 @@ Rest API endpoints for all the offical ComicRay applications backed by ASP.Net C
 - [The Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt)
 
 ```
-Copyright 2020 Kaustubh Patange
+Copyright 2021 Comic Ray
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
