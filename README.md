@@ -4,6 +4,8 @@
 
 Rest API endpoints for all the offical ComicRay applications backed by ASP.Net Core technology using .Net5.
 
+- Swagger: https://comic-ray.herokuapp.com/swagger/index.html
+
 ## License
 
 - [The Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt)
