@@ -28,7 +28,9 @@ namespace ComicAPI.comicx.v1.Controllers
         {
             try
             {
-                var data = await PageParser.Parse($"{BaseUrl}/{tag}");
+                if (tag == null) throw new PageParserException(400, "Invalid request, no tag parameter found.");
+
+                var data = await PageParser.Parse($"{BaseUrl}/{tag}", page);
                 return Ok(data);
             }
             catch (PageParserException ex)
